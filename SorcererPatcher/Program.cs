@@ -239,7 +239,7 @@ public class Program
 
                 // Book logic
                 notes.EditorID = "MAG_ResearchNotes" + nameStripped;
-                notes.Name = "Research Notes: " + name;
+                notes.Name = "Forschungsnotizen: " + name;
                 notes.Weight = 0;
                 notes.Value = costliestEffectLevel switch
                 {
@@ -251,10 +251,10 @@ public class Program
                 };
                 notes.PickUpSound = pickUpSound;
                 notes.BookText = notes.Name;
-                notes.Description = (name != null && name.Contains("of the")) switch
+                notes.Description = (name != null && name.Contains("der")) switch
                 {
-                    true => $"Allows you to craft Scrolls of the {name}.",
-                    false => $"Allows you to craft Scrolls of {name}."
+                    true => $"Ermöglicht dir, die Schriftrolle der {name} herzustellen.",
+                    false => $"Ermöglicht dir, die Schriftrolle des {name} herzustellen."
                 };
                 notes.Keywords = new ExtendedList<IFormLinkGetter<IKeywordGetter>>
                 {
@@ -293,7 +293,7 @@ public class Program
 
                 // Perk logic
                 perk.EditorID = "MAG_ResearchPerk" + nameStripped;
-                perk.Name = name + " Research Perk";
+                perk.Name =  "Forschungs-Perk: " + name;
                 perk.Playable = true;
                 perk.Hidden = true;
                 perk.Level = 0;
