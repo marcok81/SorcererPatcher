@@ -253,8 +253,8 @@ public class Program
                 notes.BookText = notes.Name;
                 notes.Description = (name != null && name.Contains("der")) switch
                 {
-                    true => $"Ermöglicht dir, die Schriftrolle der {name} herzustellen.",
-                    false => $"Ermöglicht dir, die Schriftrolle des {name} herzustellen."
+                    true => $"Ermöglicht dir, die {name} herzustellen.",
+                    false => $"Ermöglicht dir, die {name} herzustellen."
                 };
                 notes.Keywords = new ExtendedList<IFormLinkGetter<IKeywordGetter>>
                 {
